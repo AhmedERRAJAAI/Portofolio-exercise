@@ -1,0 +1,261 @@
+/* start global rules */
+* {
+  -moz-box-sizing: border-box;
+  -webkit-box-sizing: border-box;
+  box-sizing: border-box;
+  padding: 0;
+  margin: 0;
+}
+
+.container {
+  padding-left: 15px;
+  padding-right: 15px;
+  margin-left: auto;
+  margin-right: auto;
+}
+@media (min-width: 768px) {
+  .container {
+    width: 750px;
+  }
+}
+@media (min-width: 992px) {
+  .container {
+    width: 970px;
+  }
+}
+@media (min-width: 1200px) {
+  .container {
+    width: 1170px;
+  }
+}
+
+body {
+  font-family: "Noto Sans Display", sans-serif;
+}
+
+/* end global rules */
+
+/* start landing */
+.landing {
+  height: 140vh;
+}
+nav {
+  background-color: #1f203a;
+  padding-top: 10px;
+  padding-bottom: 10px;
+}
+nav .container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+nav .container img {
+  width: 50px;
+}
+nav .container i {
+  font-size: 25px;
+  color: white;
+}
+nav .container li {
+  color: white;
+  display: inline-block;
+  margin-left: 40px;
+}
+/* start portrait */
+.landing .parent {
+  background-color: #eee;
+  height: 50%;
+}
+.landing .container {
+  text-align: center;
+  position: relative;
+  top: -50%;
+}
+.landing .container .portrait {
+  width: 300px;
+  height: 300px;
+  position: relative;
+  top: 120px;
+  margin-bottom: 150px;
+  border-radius: 50%;
+  border: 6px solid white;
+}
+.landing .container .text {
+  width: 50%;
+  margin: auto;
+  text-align: center;
+}
+
+.landing .container .text h3 {
+  font-size: 40px;
+  text-transform: uppercase;
+  font-weight: 200;
+  letter-spacing: 1.6px;
+  margin-bottom: 20px;
+}
+@media (max-width: 768px) {
+  .landing .container .portrait {
+    width: 200px;
+    height: 200px;
+    top: 100px;
+  }
+
+  .landing .container .text {
+    margin-top: 80px;
+    width: 70%;
+  }
+  .landing .container .text h3 {
+    font-size: 30px;
+  }
+}
+.landing .container .text h3 span {
+  font-weight: 600;
+}
+.landing .container .text p {
+  font-weight: 300;
+  color: #555;
+  font-size: 16px;
+  line-height: 1.2;
+  margin-bottom: 20px;
+}
+.landing .container .text button {
+  border: none;
+  background: none;
+  color: #000;
+  border-bottom: 2.2px solid black;
+  text-transform: uppercase;
+  font-weight: 600;
+  font-size: 13px;
+  letter-spacing: 1.8px;
+  margin-bottom: 80px;
+}
+/* end landing */
+/* start home section */
+.home-section {
+  position: relative;
+}
+.home-section .container {
+  display: flex;
+  justify-content: space-between;
+}
+
+.home-section .box {
+  width: 45%;
+}
+@media (max-width: 600px) {
+  .home-section .container {
+    flex-direction: column;
+  }
+  .home-section .box {
+    width: 90%;
+    margin-left: auto;
+    margin-right: auto;
+  }
+}
+.home-section .box img {
+  height: 500px;
+  width: 100%;
+}
+.home-section .box h3 {
+  font-size: 40px;
+  margin-bottom: 30px;
+  font-weight: 300;
+}
+.home-section .box h3 span {
+  font-weight: 500;
+  font-size: 50px;
+}
+.home-section .box p {
+  font-size: 14px;
+  color: #222;
+  margin-top: 20px;
+  margin-bottom: 20px;
+}
+.home-section .box button {
+  padding: 6px 15px;
+  border: 1px solid black;
+  background: transparent;
+  cursor: pointer;
+  transition: 0.2s;
+}
+.home-section .box button:hover {
+  background-color: #1f203a;
+  color: white;
+}
+.overlay {
+  height: 50vh;
+  width: 100%;
+  background-color: #eee;
+  position: absolute;
+  z-index: -3;
+  top: 70%;
+}
+/* end home section */
+
+/* start build section */
+.build {
+  padding-top: 200px;
+  padding-bottom: 100px;
+}
+.build .container {
+  display: flex;
+  justify-content: space-around;
+  flex-wrap: wrap;
+  width: 70%;
+}
+
+.build .container h3 {
+  font-size: 100px;
+  text-align: right;
+  font-weight: 300;
+}
+@media (max-width: 600px) {
+  .build .container {
+    width: 100%;
+  }
+  .build .container h3 {
+    font-size: 60px;
+    width: 100%;
+    margin-bottom: 30px;
+  }
+}
+.build .container h3 span {
+  font-weight: bold;
+}
+.build .container .box {
+  width: 50%;
+  position: relative;
+  margin-left: 20px;
+}
+
+.build .container .box .text {
+  position: absolute;
+  bottom: 0;
+}
+@media (max-width: 992px) {
+  .build .container .box .text {
+    position: relative;
+  }
+  .build .container .box {
+    width: 100%;
+  }
+}
+.build .container .box .text p {
+  color: #666;
+  font-size: 15px;
+  line-height: 1.4;
+}
+.build .container .box .text button {
+  padding: 8px 18px;
+  border: none;
+  background-color: #ffa54d;
+  transition: 0.2s;
+  margin-top: 20px;
+  text-transform: uppercase;
+  color: white;
+  cursor: pointer;
+}
+.build .container .box .text button:hover {
+  background-color: #f78a1d;
+}
+/* end build section */
