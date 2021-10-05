@@ -1,12 +1,14 @@
 /* start global rules */
 * {
-  -moz-box-sizing: border-box;
-  -webkit-box-sizing: border-box;
-  box-sizing: border-box;
   padding: 0;
   margin: 0;
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  box-sizing: border-box;
 }
-
+body {
+  font-family: "Open Sans", sans-serif;
+}
 .container {
   padding-left: 15px;
   padding-right: 15px;
@@ -28,234 +30,194 @@
     width: 1170px;
   }
 }
-
-body {
-  font-family: "Noto Sans Display", sans-serif;
-}
-
 /* end global rules */
-
-/* start landing */
-.landing {
-  height: 140vh;
-}
-nav {
+/* start nav bar */
+.nav-bar {
   background-color: #1f203a;
   padding-top: 10px;
   padding-bottom: 10px;
 }
-nav .container {
+.nav-bar .container {
   display: flex;
   justify-content: space-between;
   align-items: center;
 }
-nav .container img {
+.nav-bar .container img {
   width: 50px;
 }
-nav .container i {
+.nav-bar .container i {
+  color: #fff;
   font-size: 25px;
-  color: white;
 }
-nav .container li {
-  color: white;
-  display: inline-block;
-  margin-left: 40px;
-}
-/* start portrait */
-.landing .parent {
+/* end nav bar */
+/* start profile section */
+.profile {
   background-color: #eee;
-  height: 50%;
 }
-.landing .container {
+.profile .container {
   text-align: center;
   position: relative;
-  top: -50%;
 }
-.landing .container .portrait {
-  width: 300px;
-  height: 300px;
-  position: relative;
-  top: 120px;
-  margin-bottom: 150px;
-  border-radius: 50%;
+.profile .container img {
+  width: 360px;
   border: 6px solid white;
-}
-.landing .container .text {
-  width: 50%;
-  margin: auto;
-  text-align: center;
-}
-
-.landing .container .text h3 {
-  font-size: 40px;
-  text-transform: uppercase;
-  font-weight: 200;
-  letter-spacing: 1.6px;
-  margin-bottom: 20px;
+  border-radius: 50%;
+  position: relative;
+  bottom: -70px;
 }
 @media (max-width: 768px) {
-  .landing .container .portrait {
-    width: 200px;
-    height: 200px;
-    top: 100px;
+  .profile .container img {
+    width: 300px;
   }
+}
+@media (max-width: 500px) {
+  .profile .container img {
+    width: 200px;
+  }
+}
+/* end profile section */
 
-  .landing .container .text {
-    margin-top: 80px;
+/* start creative section */
+.creative {
+  padding-top: 100px;
+  padding-bottom: 100px;
+}
+.creative .container {
+  text-align: center;
+  width: 50%;
+}
+
+.creative .container h3 {
+  font-size: 40px;
+  font-weight: 350;
+}
+@media (max-width: 992px) {
+  .creative .container {
     width: 70%;
   }
-  .landing .container .text h3 {
+  .creative .container h3 {
+    font-size: 35px;
+  }
+}
+@media (max-width: 768px) {
+  .creative .container {
+    width: 80%;
+  }
+  .creative .container h3 {
     font-size: 30px;
   }
 }
-.landing .container .text h3 span {
-  font-weight: 600;
+@media (max-width: 500px) {
+  .creative .container {
+    width: 90%;
+  }
+  .creative .container h3 {
+    font-size: 25px;
+  }
 }
-.landing .container .text p {
-  font-weight: 300;
+.creative .container h3 span:first-child {
+  font-weight: 500;
+}
+.creative .container p {
   color: #555;
-  font-size: 16px;
+  font-weight: 380;
   line-height: 1.2;
-  margin-bottom: 20px;
+  font-size: 16px;
+  margin-top: 15px;
+  margin-bottom: 15px;
 }
-.landing .container .text button {
-  border: none;
+.creative .container > span {
+  margin-bottom: 15px;
+  color: black;
+  font-size: 15px;
+  display: inline-block;
+}
+.creative .container > span a {
+  color: #1f203a;
+}
+.creative .container button {
+  display: block;
+  margin: 0 auto 15px;
   background: none;
-  color: #000;
-  border-bottom: 2.2px solid black;
-  text-transform: uppercase;
-  font-weight: 600;
-  font-size: 13px;
-  letter-spacing: 1.8px;
-  margin-bottom: 80px;
+  border: none;
+  border-bottom: 2px solid black;
+  font-weight: 450;
+  cursor: pointer;
 }
-/* end landing */
-/* start home section */
-.home-section {
+/* end creative section */
+
+/* start show section */
+.show-section {
   position: relative;
 }
-.home-section .container {
+.show-section .container {
   display: flex;
   justify-content: space-between;
 }
-
-.home-section .box {
+.show-section .container .box {
   width: 45%;
 }
-@media (max-width: 600px) {
-  .home-section .container {
+@media (max-width: 768px) {
+  .show-section .container {
     flex-direction: column;
   }
-  .home-section .box {
-    width: 90%;
+  .show-section .container .box {
+    width: 80%;
     margin-left: auto;
     margin-right: auto;
   }
+  .show-section .container .box:nth-child(2) {
+    margin-top: 60px;
+  }
 }
-.home-section .box img {
-  height: 500px;
-  width: 100%;
+@media (max-width: 400px) {
+  .show-section .container .box {
+    width: 92%;
+  }
+  .show-section .container .box:nth-child(2) {
+    margin-top: 40px;
+  }
 }
-.home-section .box h3 {
-  font-size: 40px;
+.show-section .container .box h3 {
+  font-size: 55px;
+  font-weight: 350;
+  margin-top: 30px;
   margin-bottom: 30px;
-  font-weight: 300;
 }
-.home-section .box h3 span {
-  font-weight: 500;
-  font-size: 50px;
+.show-section .container .box h3 > span {
+  font-weight: 550;
 }
-.home-section .box p {
-  font-size: 14px;
-  color: #222;
+.show-section .container .box img {
+  width: 100%;
+  height: 500px;
+}
+@media (max-width: 400px) {
+  .show-section .container .box img {
+    height: 250px;
+  }
+}
+.show-section .container .box p {
   margin-top: 20px;
   margin-bottom: 20px;
+  font-size: 13px;
+  font-weight: 400;
 }
-.home-section .box button {
-  padding: 6px 15px;
-  border: 1px solid black;
-  background: transparent;
-  cursor: pointer;
-  transition: 0.2s;
+.show-section .container .box p > a {
+  color: black;
+  font-weight: 420;
 }
-.home-section .box button:hover {
-  background-color: #1f203a;
-  color: white;
+.show-section .container .box button {
+  background: none;
+  padding: 6px 14px;
+  border: 2px solid black;
 }
-.overlay {
-  height: 50vh;
+.show-section::after {
+  content: "";
+  height: 50%;
   width: 100%;
   background-color: #eee;
   position: absolute;
-  z-index: -3;
-  top: 70%;
-}
-/* end home section */
-
-/* start build section */
-.build {
-  padding-top: 200px;
-  padding-bottom: 100px;
-}
-.build .container {
-  display: flex;
-  justify-content: space-around;
-  flex-wrap: wrap;
-  width: 70%;
-}
-
-.build .container h3 {
-  font-size: 100px;
-  text-align: right;
-  font-weight: 300;
-}
-@media (max-width: 600px) {
-  .build .container {
-    width: 100%;
-  }
-  .build .container h3 {
-    font-size: 60px;
-    width: 100%;
-    margin-bottom: 30px;
-  }
-}
-.build .container h3 span {
-  font-weight: bold;
-}
-.build .container .box {
-  width: 50%;
-  position: relative;
-  margin-left: 20px;
-}
-
-.build .container .box .text {
-  position: absolute;
   bottom: 0;
+  z-index: -2;
 }
-@media (max-width: 992px) {
-  .build .container .box .text {
-    position: relative;
-  }
-  .build .container .box {
-    width: 100%;
-  }
-}
-.build .container .box .text p {
-  color: #666;
-  font-size: 15px;
-  line-height: 1.4;
-}
-.build .container .box .text button {
-  padding: 8px 18px;
-  border: none;
-  background-color: #ffa54d;
-  transition: 0.2s;
-  margin-top: 20px;
-  text-transform: uppercase;
-  color: white;
-  cursor: pointer;
-}
-.build .container .box .text button:hover {
-  background-color: #f78a1d;
-}
-/* end build section */
+/* end show section */
